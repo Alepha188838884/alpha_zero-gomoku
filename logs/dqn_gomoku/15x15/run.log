@@ -1,0 +1,28 @@
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/torch/utils/_pytree.py:185: FutureWarning: optree is installed but the version is too old to support PyTorch Dynamo in C++ pytree. C++ pytree support is disabled. Please consider upgrading optree using `python3 -m pip install --upgrade 'optree>=0.13.0'`.
+  warnings.warn(
+step=20004 episodes=465 mix_episodes=238 eps=0.880 loss=0.0371 ep_len=43.0 black_wr=0.542 vs_random=1.000 vs_heuristic=0.000 vs_prev=nan buffer=20004 elapsed=563.7s
+step=40011 episodes=1119 mix_episodes=335 eps=0.760 loss=0.0314 ep_len=30.6 black_wr=0.524 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.367 buffer=40011 elapsed=1305.6s
+step=60009 episodes=1846 mix_episodes=340 eps=0.640 loss=0.0288 ep_len=27.5 black_wr=0.540 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.500 buffer=60009 elapsed=2051.0s
+step=80006 episodes=2752 mix_episodes=447 eps=0.520 loss=0.0279 ep_len=22.1 black_wr=0.514 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.633 buffer=80006 elapsed=2801.0s
+step=100011 episodes=3885 mix_episodes=566 eps=0.400 loss=0.0269 ep_len=17.7 black_wr=0.594 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.433 buffer=100011 elapsed=3554.0s
+step=120013 episodes=5132 mix_episodes=579 eps=0.280 loss=0.0260 ep_len=16.0 black_wr=0.650 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.533 buffer=120013 elapsed=4310.4s
+step=140000 episodes=6615 mix_episodes=735 eps=0.160 loss=0.0256 ep_len=13.5 black_wr=0.683 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.433 buffer=140000 elapsed=5069.1s
+step=160000 episodes=8357 mix_episodes=879 eps=0.100 loss=0.0260 ep_len=11.5 black_wr=0.768 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.600 buffer=160000 elapsed=5832.4s
+step=180003 episodes=10202 mix_episodes=916 eps=0.100 loss=0.0252 ep_len=10.8 black_wr=0.829 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.633 buffer=180003 elapsed=6596.6s
+step=200006 episodes=11963 mix_episodes=854 eps=0.100 loss=0.0248 ep_len=11.4 black_wr=0.799 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.533 buffer=200000 elapsed=7364.2s
+step=220003 episodes=13508 mix_episodes=750 eps=0.100 loss=0.0228 ep_len=12.9 black_wr=0.667 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.433 buffer=200000 elapsed=8131.2s
+step=240006 episodes=14993 mix_episodes=746 eps=0.100 loss=0.0217 ep_len=13.5 black_wr=0.363 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.533 buffer=200000 elapsed=8898.4s
+step=260014 episodes=16361 mix_episodes=692 eps=0.100 loss=0.0202 ep_len=14.6 black_wr=0.376 vs_random=1.000 vs_heuristic=0.000 vs_prev=0.767 buffer=200000 elapsed=9668.2s
+step=280007 episodes=17653 mix_episodes=643 eps=0.100 loss=0.0191 ep_len=15.5 black_wr=0.404 vs_random=1.000 vs_heuristic=0.100 vs_prev=0.600 buffer=200000 elapsed=10435.2s
+step=300002 episodes=18872 mix_episodes=615 eps=0.100 loss=0.0178 ep_len=16.4 black_wr=0.437 vs_random=1.000 vs_heuristic=0.033 vs_prev=0.500 buffer=200000 elapsed=11203.1s
+step=320015 episodes=20007 mix_episodes=578 eps=0.100 loss=0.0165 ep_len=17.6 black_wr=0.522 vs_random=1.000 vs_heuristic=0.033 vs_prev=0.533 buffer=200000 elapsed=11971.9s
+step=340012 episodes=21073 mix_episodes=545 eps=0.100 loss=0.0160 ep_len=18.8 black_wr=0.516 vs_random=1.000 vs_heuristic=0.133 vs_prev=0.567 buffer=200000 elapsed=12742.6s
+step=360005 episodes=22144 mix_episodes=521 eps=0.100 loss=0.0155 ep_len=18.7 black_wr=0.493 vs_random=1.000 vs_heuristic=0.167 vs_prev=0.600 buffer=200000 elapsed=13515.2s
+step=380006 episodes=23198 mix_episodes=566 eps=0.100 loss=0.0154 ep_len=19.0 black_wr=0.527 vs_random=1.000 vs_heuristic=0.133 vs_prev=0.567 buffer=200000 elapsed=14287.8s
+step=400019 episodes=24221 mix_episodes=516 eps=0.100 loss=0.0149 ep_len=19.6 black_wr=0.574 vs_random=1.000 vs_heuristic=0.300 vs_prev=0.567 buffer=200000 elapsed=15061.2s
+step=420003 episodes=25245 mix_episodes=509 eps=0.100 loss=0.0144 ep_len=19.5 black_wr=0.643 vs_random=1.000 vs_heuristic=0.267 vs_prev=0.400 buffer=200000 elapsed=15833.8s
+step=440007 episodes=26260 mix_episodes=520 eps=0.100 loss=0.0141 ep_len=19.7 black_wr=0.655 vs_random=1.000 vs_heuristic=0.233 vs_prev=0.667 buffer=200000 elapsed=16606.3s
+step=460000 episodes=27266 mix_episodes=478 eps=0.100 loss=0.0135 ep_len=19.9 black_wr=0.587 vs_random=1.000 vs_heuristic=0.167 vs_prev=0.400 buffer=200000 elapsed=17379.0s
+step=480020 episodes=28274 mix_episodes=491 eps=0.100 loss=0.0129 ep_len=19.9 black_wr=0.588 vs_random=1.000 vs_heuristic=0.200 vs_prev=0.467 buffer=200000 elapsed=18152.3s
+step=500000 episodes=29358 mix_episodes=499 eps=0.100 loss=0.0132 ep_len=18.4 black_wr=0.638 vs_random=1.000 vs_heuristic=0.367 vs_prev=0.400 buffer=200000 elapsed=18925.1s
+训练完成，共 500000 步，29358 局，用时 18926.4s

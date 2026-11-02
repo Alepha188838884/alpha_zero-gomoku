@@ -1,0 +1,25 @@
+# Mac/OSX
+.DS_Store
+
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+.vscode
+
+nohup.out
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
+# IDE
+.idea/
+
+# Upstream data, available at michaelnny/alpha_zero
+/games/
+/checkpoints/go/
+/checkpoints/gomoku/
+/logs/go/
+/logs/gomoku/
