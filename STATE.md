@@ -17,7 +17,7 @@ michaelnny/alpha_zero 的 fork。原版 AlphaZero（围棋 / 五子棋）代码�
 - 9x9、`num_stack=1`（3 平面输入）、4 层 64 通道卷积 Q 网络。
 - Double DQN + negamax 目标、输家回填 −1、目标 max 屏蔽非法动作、8 对称数据增强。
 - 评估对固定对手（random / heuristic / 上一快照），前 2 手随机开局。
-- 12 个单元测试：`/usr/local/bin/python3 -m unittest dqn_gomoku.tests.test_dqn`
+- 15 个单元测试：`/usr/local/bin/python3 -m unittest dqn_gomoku.tests.test_dqn`
 - **必须用 `/usr/local/bin/python3`（3.11.1，PyCharm 用的解释器）**：3.11.1 的 `random.choice` 不接受 numpy 数组，代码里已规避，但测试要在这个解释器上跑。
 
 ## 训练记录
@@ -59,4 +59,4 @@ MPS 约 47 环境步/秒，CPU 慢 4.4 倍。
 - 目标仓库（私有）：`Alepha188838884/alpha_zero-gomoku`。本目录有独立 `.git`，不要从上层 `~/Desktop` 推送。
 - 2026-11-02：已本地提交；Claude Code 的建仓和推送命令被自动权限拦截，由用户决定是否执行。
 - 未上传（与上游 michaelnny/alpha_zero 文件数一致、日期均为 2024-10-26，已写入 `.gitignore`）：`games/`、`checkpoints/go/`、`checkpoints/gomoku/`、`logs/go/`、`logs/gomoku/`。另忽略 `.idea/`。
-- 公开前待办：`README.md` 仍是上游作者的说明，需在顶部写明哪些是本人工作（`dqn_gomoku/`、旧 DQN 诊断）、哪些来自上游。
+- `README.md` 顶部已写明本人工作与上游的区分。2026-11-02 复测对启发式 100 局：9x9_stage2/final.pt 92%，15x15/final.pt 29%。

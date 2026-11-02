@@ -1,3 +1,53 @@
+# About this repository
+
+This repository is based on [michaelnny/alpha_zero](https://github.com/michaelnny/alpha_zero) by Michael Hu (MIT License). **I did not write the AlphaZero implementation.** My work is teaching an agent to play gomoku with DQN on a laptop. Everything after the "Original README" line below is the upstream author's text, including the references to "my book".
+
+## What I added
+
+| Path | What it is |
+|---|---|
+| `dqn_gomoku/` | DQN gomoku agent: training, evaluation, opponents and 15 unit tests. Built with AI coding assistance (Claude Code) |
+| `checkpoints/dqn_gomoku/`, `logs/dqn_gomoku/` | Trained weights, training logs and curves for the agent above |
+| `training_gomoku_dqn*.py`, root `play.py`, `dqn_gomoku*.pth`, `rewards.json`, `result/` | My first DQN attempt from February 2025. It did not learn; kept unchanged as a record |
+| `alpha_zero/training_gomoku_dqn.py`, `alpha_zero/ppo.py`, `alpha_zero/training_gomoku_ppo.py`, `alpha_zero/core/mcts_v3.py`, `alpha_zero/logs/` | Earlier DQN, PPO and MCTS experiments |
+
+I also changed two upstream files: `alpha_zero/training_gomoku.py` and `alpha_zero/core/mcts_v2.py`. My edit to `mcts_v2.py` broke `uct_search`, so the old root `play.py` and `num_parallel=1` do not work. The default parallel search path still does.
+
+## Results
+
+Win rate against a fixed rule-based opponent that makes and blocks lines, over 100 games with random openings:
+
+| Board | Training | Win rate |
+|---|---|---|
+| 9x9 | 500k steps: self-play, then 50% of games against the rule-based opponent | 90-94% |
+| 15x15 | 500k steps with the same mixed opponents | 22-29% |
+
+The 15x15 agent still loses by failing to block open fours. DQN without search looks like the limit here, so the next step is to add search rather than train longer.
+
+## Why the first attempt failed
+
+- Rewards for both players were summed per game, so the logged curve was always 1.0 and showed nothing.
+- The self-play target used `r + γ·max Q(s')`, but `s'` is the opponent's view. It should be `r − γ·max Q(s')`.
+- The losing player's last move never received −1.
+- The target network's `max` included illegal moves.
+- A fully connected network had no spatial structure.
+
+## Run it
+
+```
+python3 -m unittest dqn_gomoku.tests.test_dqn
+python3 -m dqn_gomoku.evaluate --ckpt checkpoints/dqn_gomoku/9x9_stage2/final.pt --opponent heuristic --games 100
+python3 -m dqn_gomoku.play --ckpt checkpoints/dqn_gomoku/9x9_stage2/final.pt
+```
+
+## Not included
+
+Upstream's `games/`, `checkpoints/go/`, `checkpoints/gomoku/`, `logs/go/` and `logs/gomoku/` are left out to keep the repository small. Upstream commands below that use them need those folders from the upstream repository.
+
+---
+
+*Original README:*
+
 # Alpha Zero
 
 A PyTorch implementation of DeepMind's AlphaZero agent to play Go and Free-style Gomoku board game.
