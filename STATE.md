@@ -56,7 +56,6 @@ MPS 约 47 环境步/秒，CPU 慢 4.4 倍。
 - 备份：`../alpha_zero-main_backup_20260924.tar.gz`。
 
 ## GitHub（2026-11-02）
-- 目标仓库（私有）：`Alepha188838884/alpha_zero-gomoku`。本目录有独立 `.git`，不要从上层 `~/Desktop` 推送。
-- 2026-11-02：已本地提交；Claude Code 的建仓和推送命令被自动权限拦截，由用户决定是否执行。
+- 仓库：`Alepha188838884/alpha_zero-gomoku`，PRIVATE，已推送。本目录有独立 `.git`，不要从上层 `~/Desktop` 推送。git/gh 命令要加 `env -u GITHUB_TOKEN`。
 - 未上传（与上游 michaelnny/alpha_zero 文件数一致、日期均为 2024-10-26，已写入 `.gitignore`）：`games/`、`checkpoints/go/`、`checkpoints/gomoku/`、`logs/go/`、`logs/gomoku/`。另忽略 `.idea/`。
 - `README.md` 顶部已写明本人工作与上游的区分。2026-11-02 复测对启发式 100 局：9x9_stage2/final.pt 92%，15x15/final.pt 29%。
